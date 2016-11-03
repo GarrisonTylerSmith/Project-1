@@ -36,10 +36,10 @@ static PPMImage *readPPM(const char *filename)
     if (buff[0] != 'P' || buff[1] != '3') {
          fprintf(stderr, "Invalid image format (must be 'P3')\n");
          exit(1);
-    }else if(buff[0] != 'P' || buff[1] != '6') {
-         fprintf(stderr, "Invalid image format (must be 'P6')\n");
-         exit(1);
-    }
+    }// }else if(buff[0] != 'P' || buff[1] != '6') {
+    //      fprintf(stderr, "Invalid image format (must be 'P6')\n");
+    //      exit(1);
+    // }
 
 
     //alloc memory form image
@@ -140,5 +140,6 @@ int main(){
     changeColorPPM(image);
     writePPM("can_bottom2.ppm",image);
     //printf("Press any key...");
-    getchar();
+    //getchar();
+    return 0;
 }
